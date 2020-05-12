@@ -1,0 +1,10 @@
+# replace with hello with world in file.txt
+
+sed -i 's/hello/world/' file.txt
+
+# sed can extract xml fragments.
+# two addresses are separated by a comma.
+# -n suppresses all output
+# p prints the matching pattern
+
+sed -n '/ParticipantJoinEvent/,/event/p'
