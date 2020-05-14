@@ -1,0 +1,50 @@
+//switch user to postgres
+sudo su postgres
+
+//Reach psql
+postgres@portal-dev:~$ psql
+
+//clear screen
+ctrl+L
+
+//show  databses
+postgres=# \l
+                                    List of databases
+      Name      |  Owner   | Encoding |   Collate   |    Ctype    |   Access privileges
+----------------+----------+----------+-------------+-------------+-----------------------
+ postgres       | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 |
+ template0      | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres          +
+                |          |          |             |             | postgres=CTc/postgres
+ template1      | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres          +
+                |          |          |             |             | postgres=CTc/postgres
+
+postgres=# \c
+You are now connected to database "postgres" as user "postgres".
+
+//Switch to our DB
+postgres=# \c database_name
+You are now connected to database "database_name" as user "postgres".
+
+//show tables
+database_name=# \d
+
+//search table with regexp
+database_name=# \dt *user*
+
+//Show table schema
+database_name=# \dS mdl_user;
+
+//pretty display - On/Off - same command
+database_name=# \x
+
+//Sample query
+database_name=# SELECT id  FROM "mdl_user" WHERE username='8000000019';
+
+//help
+database_name=# \?
+
+//exit from other window, eg:schema display
+q (same as vi)
+
+//exit from psql
+\q
