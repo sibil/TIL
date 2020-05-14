@@ -1,0 +1,10 @@
+# = will clear all filters in top command.
+
+# o to filter top output, followed by the filter
+# e.g: COMMAND=node will show only node processes.
+
+#monitor specific processes.
+top -p `pgrep -d ',' "mongo|freeswitch|node|kurento"`
+
+#process IDs separated by comma
+top -p 123, 345

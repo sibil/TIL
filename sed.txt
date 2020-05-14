@@ -1,4 +1,6 @@
 # replace with hello with world in file.txt
+# -i does replacement within the file
+# without -i output goes to standard output
 
 sed -i 's/hello/world/' file.txt
 
