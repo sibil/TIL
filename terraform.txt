@@ -1,0 +1,38 @@
+FreeCodeCamp Terraform intro
+==============
+
+infrastructure as code.
+
+Hashicorp Configuration Language
+
+Terraform plugin for providers
+
+terraform init - Initialize
+terraform validate - validate config file
+terraform plan - Review the actions before apply
+terraform apply - Create/Modify the infrastructure components
+terraform destroy
+
+#unattended apply.
+terrform apply --auto-approve
+
+Terraform smartly finds dependencies in most cases.
+"depends_on = provider_resource" can be used to specify the dependency of a resource on another.
+
+
+terraform state list
+terraform state show resource_name
+
+#output can be used to print important information
+output = aws_eip.public_ip
+
+#print "output" without applying the changes.
+terraform refresh 
+
+#apply change only for targeted resources.
+#without target all resources are created/modified/destroyed !!!
+terraform -target resource_name apply
+
+terraform variables are handy
+Environmental variables can be used for secrets.
+
