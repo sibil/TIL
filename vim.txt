@@ -1,0 +1,21 @@
+#stdout to vim
+grep -ir “data”  .| vim -
+
+#save buffer in a new file
+:w results.txt
+
+#insert date at cursor
+:r !date
+
+#insert pwd at cursor, this is awesome.
+:r !pwd
+
+#delete up to a character from current position
+dtc - delete till 'c'
+dTc - delete till 'c' backwards
+
+d/l - delete till search i.e till 'l' in this example
+
+c/l - change till search
+c?l - change till search - backwards
+
