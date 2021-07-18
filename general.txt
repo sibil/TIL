@@ -1,0 +1,17 @@
+#see full log of a  systemctl service
+sudo journalctl -u coturn.service
+
+#create unified patch
+diff -u file1 file2
+#apply patch "-r -" omits reject file creation
+sudo patch -u /opt/freeswitch/conf/sip_profiles/external.xml -i ../patches/external.xml.patch -r -
+
+
+#systemd tries to do too many things.
+#Debian, RHEL, Arch and openSUSE all are using systemd 
+ubuntu@ip-172-31-22-227:~$ ps -fp 1
+UID        PID  PPID  C STIME TTY          TIME CMD
+root         1     0  0 Mar15 ?        00:05:15 /sbin/init
+ubuntu@ip-172-31-22-227:~$ ls -al /sbin/init 
+lrwxrwxrwx 1 root root 20 Feb  5 14:14 /sbin/init -> /lib/systemd/systemd
+##init is mapped to systemd

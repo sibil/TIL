@@ -1,0 +1,121 @@
+IAM
+========
+
+Allows to setup 
+- users (People/Employees of an Org)
+- groups
+- Policies (Policy documents in JSON specifies what a user/group/role can do)
+- roles. -  Example: Allow EC2 to access s3
+
+* Centralized control
+* Shared access
+* Identity Management - Login with AD, Social logins etc
+* Granular permissions - Give only access to specific services.
+* Multifactor Authentication
+* Setup password rotation policy
+* PCI DSS compliance
+
+US East is the most up to date region.(N. Virginia)
+
+Billing Alarm
+===========
+Cloud watch -> Billing Alarm -> SNS(Simple Notificaiton Service)
+
+S3 Simple Storage Service
+================
+s3 is object based
+file size ) bytes to 5 TB
+Unlimited storage
+s3 bucket name is in universal namespace - has to be globally unique
+
+key - name of the s3 object
+value - data (e.g: file contents)
+versionID
+Metadata
+Sub resources:
+  ACL
+  Torrent
+
+data consistency:
+- Read after write for PUTS (immediately you can read after a write) for NEW objects
+- Eventual consistency for overwrite via PUTS or DELETE 
+
+s3 guarantees 99.99% availability
+AWS guarantees 11 * 9s durablity for s3 information
+
+================
+
+** s3 standard
+99.99% availability
+11*9 durability
+
+** s3 IA - Infrequently Accessed
+provides rapid access when needed, lower fees but has a retrieval fee.
+
+** s3 IA - One Zone Infrequently Accessed
+as name suggests restricted to a single availability zone.
+
+** s3 Intelligent Tiering
+Driven by ML
+
+** s3 Glacier
+Data Archiving
+miniutes t0 hours of retrieval time
+
+** s3 Glacier Deep Archive
+Data Archiving - retrieval time of 12 hours is acceptable.
+
+================
+
+- s3 cross region replication
+- s3 transfer acceleration
+
+===============
+
+Exam tip:
+Read s3 FAQs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

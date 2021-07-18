@@ -1,0 +1,13 @@
+##get inside the Greenlight postgresql container.
+docker exec -it greenlight_db_1 /bin/bash
+
+##connect to PostgreSQL
+psql -h db -U postgres
+## password stored in /root/greenlight/.env - grep for DB_PASSWORD 
+
+##switch to the production database.
+Database name: greenlight_production_new
+
+##Room settings
+select distinct(room_settings) from rooms;
+{"muteOnStart":false,"requireModeratorApproval":true,"anyoneCanStart":true,"joinModerator":true}

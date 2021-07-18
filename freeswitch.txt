@@ -1,0 +1,10 @@
+Default password = ClueCon
+
+fs_cli
+
+sophia status
+show registrations
+
+dialplan -> defines the gateway
+
+default users 1000 to 1019

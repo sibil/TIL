@@ -1,0 +1,75 @@
+Python quick reference:
+https://programmingwithmosh.com/python/python-3-cheat-sheet/ - Mosh Hamedani
+https://www.youtube.com/watch?v=f79MRyMsjrQ&feature=youtu.be - Mosh Hamedani's video intro to Python
+
+https://www.w3schools.com/python/
+https://www.learnpython.org/
+
+
+Tokenize a string.
+string.split() - default delimiter -> space.
+string.replace(',','') - removes commas
+
+Recursion Limit:
+sys.getrecursionlimit()
+sys.setrecursionlimit(1500)
+
+#Memory Allocation:
+https://medium.com/datadriveninvestor/how-does-memory-allocation-work-in-python-and-other-languages-d2d8a9398543
+----
+
+Mutable:
+list, dictionary, bytearray, set, objects, functions
+
+---
+When you need to set a mutable variable as a default argument, always use None and then set the value in the body of the function. This prevents unexpected behavior like adding multiple columns if you call the function more than once.
+my_func(x, y=None):
+  if y is None:
+    y = [1,2,3]
+---
+
+#context manager - Example 
+with open(file.txt) as f:
+  blah blah
+
+#context manager creation - using function definition
+# you can also create using Class by having __enter__/__exit__ methods.
+@contextlib.contextmanager
+def timer():
+  start = time.time()
+  # Send control back to the context block
+  yield
+  end = time.time()
+  print('Elapsed: {:.2f}s'.format(end - start))
+
+
+Nested context managers.
+Read from a file and write to another
+with open('a.txt', 'r') as read_only:
+  with open('b.txt', 'w') as write_file:
+    ---  
+----
+
+#get fuction documentation
+my_func.__doc__
+
+Python support multiple inheritance
+
+class Test(Base1, Base2):
+   def __init__():
+
+List 
+====
+for index,value in enumerate(my_list) :
+  print(index, value)
+       
+
+NumPy
+=======
+import numpy as np
+#This works for 1D array
+for x in my_array :
+    ...
+#For 2D array, we need np.nditer iterator
+for x in np.nditer(my_array) :
+    ...

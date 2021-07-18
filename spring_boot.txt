@@ -1,0 +1,12 @@
+History:
+
+Spring Framework
+Enterpise Java Beans
+Pojo
+Lots of Configuration
+
+Spring Boot:
+Convention over configuration
+embedded tomcat inside the jar file - so you can run on top of JVM
+application.properties
+Dependency Injection

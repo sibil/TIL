@@ -1,0 +1,5 @@
+rolling updates
+== updates one server at a time so that production traffic is not affected
+
+blue/green updates
+== partial updates with a newer version

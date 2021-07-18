@@ -1,0 +1,2 @@
+#lookup revert
+systemctl revert service-name

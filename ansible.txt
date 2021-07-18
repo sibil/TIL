@@ -1,0 +1,78 @@
+KodeKloud
+
+Ansible:
+- YAML based
+- No agents required, works via ssh/PowerShell remoting
+
+Default Inventory file:
+/etc/ansible/hosts
+
+Inventory files are ini files.
+#config file
+/etc/ansible/ansible.cfg
+
+#sample inventory file
+web ansible_host=abc.company.com
+#Other inventory params - ansible_connection, ansible_port, ansible_user, ansible_ssh_pass
+
+#Grouping can be done via [] - Example: [web] - followed by the group member info.
+[web_servers]
+web1
+web2
+web3
+
+#Group of Groups
+[all_servers:children]
+web_servers
+db_servers
+
+#Always use key based ssh in production.
+
+##Playbook
+A single YAML file
+
+-
+  name:
+  hosts:
+  tasks:
+    - 
+      name: 'Execute date command'
+      command: date
+
+Order of Tasks in a playbook is important, as they are executed sequentially.
+tasks is a list of Tasks executed in order.
+
+#Modules are used within a task.
+Example Ansible Modules:
+yum
+command
+service 
+script - run a script on the controller on remote hosts
+lineinfile - add/replace a line in a file
+
+#Modules have params.
+#See src and dest in cp 
+    -
+      name: 'Execute date command'
+      command: cp src=resolv.conf dest=/etc
+
+#Many modules are idempotent
+##Concept idempotency - re-run should give the same state - state is "started" i.e the desired state.
+#state = started
+
+##Ansible Variables
+- can be defined in playbook.yaml or the inventory file or in a seprate file
+vars:
+  dns_server: 10.3.3.2
+
+##Variables are used via jinja2 templates -> double {{}}
+{{dns_server}}
+
+##Conditionals - Execute a task only when a condition is met.
+when: ansible_os_family == "RedHat"
+Also see "or" "and" "loop" conditionals.
+We can also get the result of a command and act based on it.
+See "result"
+
+
+

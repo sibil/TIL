@@ -1,0 +1,17 @@
+Bloom filters - probabilistic. 
+o/p says whether an item is NOT present in the set or "may be" present.
+The last part is not conclusive and needs further checks to ensure the existence.
+
+Recursion:
+This is a gem: https://www.johndcook.com/blog/2010/03/30/understanding-recursion/
+
+Gist of recursion:
+Be sure of three things:
+The problem gets smaller each time.
+You include a solution for the base case.
+Each case is handled correctly.
+That’s really all there is to it.
+
+How to convert recursion to iterative:
+http://blog.moertel.com/posts/2013-05-11-recursive-to-iterative.html
+

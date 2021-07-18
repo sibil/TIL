@@ -1,0 +1,25 @@
+Python function are objects.
+
+You can assign a function to a variable.
+
+def my_func():
+  return None
+#assign to a var
+x = my_func
+#call function
+x()
+
+You can add function as an element of a list or dictionary.
+
+Nested functions:
+Functions inside functions.
+
+a function can return a function as the return value
+
+#Use global x inside a function
+global x
+
+#closures
+closures helps to have non local variables associated with the functions even when the origina variables no longer exists.
+
+Decorators:

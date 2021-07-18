@@ -1,0 +1,6 @@
+##syntax check ruby .erb file
+ierb -x -T '-' app/views/shared/_footer.html.erb | ruby -c
+
+##excellent cheatsheet 
+https://github.com/ThibaultJanBeyer/cheatsheets/blob/master/Ruby-Cheatsheet.md #bookmark #ruby
+

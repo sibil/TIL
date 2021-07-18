@@ -1,0 +1,19 @@
+https://www.educative.io/courses/grokking-the-coding-interview?aff=VOY6
+
+pseudo random numbers - random number generation
+
+Corman's Introduction to Algorithms
+
+https://leetcode.com/problems/minimum-window-substring/discuss/26808/here-is-a-10-line-template-that-can-solve-most-substring-problems
+
+two pointer 
+
+recursion to iteration
+
+Sliding window problem - substring problem:
+https://leetcode.com/problems/minimum-window-substring/discuss/26808/here-is-a-10-line-template-that-can-solve-most-substring-problems
+
+Python PEP-8
+
+
+https://www.freecodecamp.org/news/coding-interviews-for-dummies-5e048933b82b/
